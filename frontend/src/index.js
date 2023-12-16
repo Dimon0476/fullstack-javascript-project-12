@@ -1,15 +1,15 @@
-import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { io } from 'socket.io-client';
+import { Provider } from 'react-redux';
+import App from './App';
 
-import init from './init';
+import store from './slices/index.js';
 
-const app = async () => {
-  const root = ReactDOM.createRoot(document.querySelector('#root'));
-  const socket = io();
-  const vdom = await init(socket);
-  root.render(<React.StrictMode>{vdom}</React.StrictMode>);
-};
-
-app();
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
+);

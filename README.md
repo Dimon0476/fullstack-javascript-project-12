@@ -1,18 +1,46 @@
 ### Hexlet tests and linter status:
-[![Actions Status](https://github.com/Dimon0476/fullstack-javascript-project-12/workflows/hexlet-check/badge.svg)](https://github.com/EuRV/fullstack-javascript-project-12/actions)
+[![Actions Status](https://github.com/Dimon0476/fullstack-javascript-project-12/workflows/hexlet-check/badge.svg)](https://github.com/Dimon0476/fullstack-javascript-project-12/actions)
 
-<p>Пятый учебный проект - <b>real-time</b> приложение на React.<br>Упрощенная версия Slack-чата</p>
 
-<h3>Системные требования:</h3>
-<p>Node.js версии 13 и выше.</p>
 
-<h3>Установка:</h3>
-<ol>
-    <li><pre>git clone...</pre></li>
-    <li><pre>cd frontend-project-12/</pre></li>
-    <li><pre>make install</pre></li>
-    <li><pre>make start</pre></li>
-</ol>
 
-<h2>Описание:</h2>
-<p><b>Дипломный проект</b> - строится на технологиях, используемых в повседневной работе фронтенд-разработчиками.<br><b>Его цель</b> - показать спектр всех стандартных задач, с которыми придётся столкнуться в реальной жизни.<br>Среди них: работа с веб-сокетами, взаимодействие с REST API, использование React (с хуками), Redux (через reduxjs/toolkit), организация роутинга на клиенте, авторизация и аутентификация, сборка (webpack) и деплой.</p>
+
+# Hexlet-chat (slack like)
+
+
+### Installation&run locally
+
+```
+make install    # install deps
+make start      # start server and front of app
+```
+
+### Docker build
+```
+docker build -t hexletchat .
+docker run --detach --rm --name=hexletchat -p 3000:3000 hexletchat
+```
+
+### Usage
+
+Main page looks like :
+
+ <img src="assets/chat.PNG" width="100%" height="auto">
+
+Features:
+
+- login chat
+- sign-up
+- write msg in channel
+- add channel
+- rename channel
+- remove channel
+- get notification
+
+Tech steck:
+- React
+- Redux-toolkit
+- websockets
+- Formik
+- axios
+- REST
